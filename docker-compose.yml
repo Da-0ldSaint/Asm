@@ -67,7 +67,7 @@ services:
       backend:
         condition: service_healthy
     ports:
-      - "80:80"               # main entry point for the application
+      - "3000:80"               # main entry point for the application
 
 volumes:
   postgres_data:
