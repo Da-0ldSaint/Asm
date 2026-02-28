@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-    baseURL: '/',
+    baseURL: 'http://asm_backend:5000/api',
     headers: {
         'Content-Type': 'application/json',
     },
