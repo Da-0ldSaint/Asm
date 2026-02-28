@@ -83,7 +83,7 @@ const MyProfile = () => {
             const formData = new FormData();
             Object.entries(form).forEach(([k, v]) => { if (k !== 'confirm_email') formData.append(k, v); });
             if (imageFile) formData.append('profile_image', imageFile);
-            const res = await axios.put('/api/users/me', formData, { headers: { 'Content-Type': 'multipart/form-data' } });
+            const res = await axios.put('/users/me', formData, { headers: { 'Content-Type': 'multipart/form-data' } });
             setUser(res.data);
             setSuccess('Profile updated successfully!');
             setTimeout(() => setSuccess(''), 3000);
