@@ -30,7 +30,7 @@ const Login = () => {
         setApiError('');
         setLoading(true);
         try {
-            const res = await axios.post('/api/auth/login', form);
+            const res = await axios.post('/auth/login', form);
             login(res.data.token, res.data.user);
             navigate('/dashboard');
         } catch (err) {
